@@ -13,7 +13,7 @@ class App extends Component {
 
   onSearchSubmit = async inputValue => {
     const response = await unsplash.get("/search/photos/", {
-      params: { query: inputValue, page: 1, per_page: 50 }
+      params: { query: inputValue, page: 1, per_page: 30 } // Max per page is 30
     });
     // console.log(response.data.results);
     this.setState({ images: response.data.results });
